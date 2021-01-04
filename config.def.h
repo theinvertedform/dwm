@@ -103,14 +103,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ControlMask,           XK_h,      incrgaps,       {.i = +1 } },
-	{ MODKEY|ControlMask,           XK_l,      incrgaps,       {.i = -1 } },
-	{ MODKEY|ControlMask|ShiftMask, XK_z,      incrogaps,      {.i = +1 } },
-	{ MODKEY|ControlMask|ShiftMask, XK_s,      incrogaps,      {.i = -1 } },
-	{ MODKEY|ControlMask|ControlMask, XK_z,    incrigaps,      {.i = +1 } },
-	{ MODKEY|ControlMask|ControlMask, XK_s,    incrigaps,      {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_0,      togglegaps,     {0} },
-	{ MODKEY|ControlMask|ShiftMask, XK_0,      defaultgaps,    {0} },
+	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },
+	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_z,      incrogaps,      {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_s,      incrogaps,      {.i = -1 } },
+	{ MODKEY|Mod1Mask|ControlMask,  XK_z,      incrigaps,      {.i = +1 } },
+	{ MODKEY|Mod1Mask|ControlMask,  XK_s,      incrigaps,      {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,     {0} },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
 	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
@@ -167,4 +167,6 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
+
 
