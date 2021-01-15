@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 15;       /* horiz inner gap between windows */
@@ -22,23 +22,27 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_purple[]      = "#654ea3";
 static const char col_red[]	        = "#FF0000";
-static const unsigned int baralpha = 0x44;
-static const unsigned int borderalpha = OPAQUE;
+static const char col_bg[]        = "#282A36";
+static const char col_fg[]        = "#F8F8F2";
+static const char col_sel[]        = "#44475A";
+static const unsigned int baralpha = 0.92;
+static const unsigned int borderalpha = 0.92;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_red  },
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeNorm] = { "#ebdbb2", "#282828", "#282828" },
+	[SchemeSel]  = { "#ebdbb2", "#282828", "#fb4934"  },
+	[SchemeStatus]  = { "#ebdbb2", "#282828",  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { "#F8F8F2", "#1d2021",  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { col_gray3, "#32302f",  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = { "#F8F8F2", "#282828",  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { "#F8F8F2", "#282828",  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 static const unsigned int alphas[][3]      = {
-	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+	/*               fg      bg        border      */
+	[SchemeNorm] = { OPAQUE, OPAQUE, borderalpha },
+	[SchemeSel]  = { OPAQUE, OPAQUE, borderalpha },
 };
 
 typedef struct {
